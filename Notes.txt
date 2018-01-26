@@ -1,3 +1,5 @@
+
+
 How To create an app in PCF
 
 1. Login to PCF using below command
@@ -13,13 +15,28 @@ How To create an app in PCF
 4. Then push the app
     cf push <NAME OF THE APP> --random-route -p <PUBLISH ARTIFACT>
     cf push pal-tracker --random-route -p src\PalTracker\bin\Release\netcoreapp2.2\publish
+
+5. To set the environment variable manully & Restart the APP
+    cf set-env pal-tracker WELCOME_MESSAGE "Hello from Cloud Foundry"
+    cf restart pal-tracker
+
+6. To Delete an App
+    cf delete pal-tracker
 -----------------------------------------------------------------------------------------------------------------------------
 MY PIVOTAL Account
     acharprashanth@gmail.com
     P@ssw0rd
+Dell Pivotal Account:
+    prashantha_achary@dell.com
+    P@$$w0rd
 Git Account
     acharprashanth@gmail
-    P@ssw0rd
+    P@$$w0rd@1983
 ---------------------------------------------------
+Lab 2- Externalized Configuration
+Need to use - vesrion has changed.
+dotnet add test/PalTrackerTests package Microsoft.AspNetCore.TestHost --version 2.2.0
+dotnet add test/PalTrackerTests package Microsoft.AspNetCore.App --version 2.2.6
+---------------------
 
 
