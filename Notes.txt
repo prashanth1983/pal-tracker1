@@ -1,0 +1,25 @@
+How To create an app in PCF
+
+1. Login to PCF using below command
+    cf login <API END POINT>
+    cf login https://api.run.pivotal.io
+2. Set the target and space using below command
+    cf target -o <ORG> -s <SPACE>
+    cf target -o DellEMC_PAL1 -s acharprashanth@gmail.com
+
+3. Before push - you need to build the app using below command
+   dotnet publish src/PalTracker --configuration Release
+
+4. Then push the app
+    cf push <NAME OF THE APP> --random-route -p <PUBLISH ARTIFACT>
+    cf push pal-tracker --random-route -p src\PalTracker\bin\Release\netcoreapp2.2\publish
+-----------------------------------------------------------------------------------------------------------------------------
+MY PIVOTAL Account
+    acharprashanth@gmail.com
+    P@ssw0rd
+Git Account
+    acharprashanth@gmail
+    P@ssw0rd
+---------------------------------------------------
+
+
